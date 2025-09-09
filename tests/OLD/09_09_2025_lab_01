@@ -1,0 +1,18 @@
+// pages/HomePage.js
+class HomePage {
+  constructor(page) {
+    this.page = page;
+    this.productsLink = page.getByRole('link', { name: 'Products' });
+    this.homeLogo = page.getByRole('link', { name: 'Website for automation' });
+  }
+ 
+  async navigateToProductsPage() {
+    await this.productsLink.click();
+  }
+ 
+  async navigateToHomePage() {
+    await this.homeLogo.click();
+  }
+}
+ 
+module.exports = HomePage;
